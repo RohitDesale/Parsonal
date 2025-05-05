@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plzz forgive me (❁´◡`❁) </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Intro screen -->
+    <div id="introScreen" class="intro">
+        <h2>Why are you so angry? 😠</h2>
+        <p>Here’s something for you 💖</p>
+        <audio id="introSong" controls autoplay>
+            <source src="./a.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="nextButton" style="display: none;" onclick="showValentine()">Next ➡️</button>
+    </div>
+
+    <!-- Main container -->
+    <div id="valentineContainer" class="container" style="display: none;">
+        <h1>Plzz forgive me (❁´◡`❁) </h1>
+        <div class="buttons">
+            <button class="yes-button" onclick="handleYesClick()">Yes</button>
+            <button class="no-button" onclick="handleNoClick()">No</button>
+        </div>
+        <div class="gif_container">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        const audio = document.getElementById("introSong");
+        const nextButton = document.getElementById("nextButton");
+
+        audio.addEventListener("ended", () => {
+            nextButton.style.display = "inline-block";
+        });
+
+        function showValentine() {
+            document.getElementById("introScreen").style.display = "none";
+            document.getElementById("valentineContainer").style.display = "block";
+        }
+    </script>
+</body>
+</html>
