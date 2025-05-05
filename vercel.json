@@ -9,12 +9,12 @@
       "src": "styles.css",
       "use": "@vercel/static"
     },
-     {
+    {
       "src": "script.js",
       "use": "@vercel/static"
     },
     {
-      "src": "a.mp3",
+      "src": "audio/a.mp3",
       "use": "@vercel/static"
     },
      {
@@ -25,7 +25,6 @@
       "src": "yes_style.css",
       "use": "@vercel/static"
     }
-
   ],
   "routes": [
     {
